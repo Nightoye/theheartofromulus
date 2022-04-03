@@ -1,0 +1,44 @@
+Text that appears outside of the <quest></quest> tags will not display anywhere and can be used for notes if required.
+
+// <quest id:Name of Quest|difficulty|catId>
+// OBJECTIVES separated by commas (leave this blank to not use objectives for a quest)
+// RESOLUTIONS separated by commas use | for line breaks (leave this blank if not using resolutions for a quest)
+// quest description
+// quest description
+// quest description
+// </quest>
+
+<quest 1:Save the world!|1|0>
+Find the \c[2]Cliche Ruby,Bring ruby to pink fairy\i[5]\v[12]
+Well... the fairy tricked us,another resolution here,another resolution here
+The pink fairy has tasked you
+with the hard task of saving the
+entire world!
+
+This will be an epic tail of pain
+and courage and stuff like that.
+</quest>
+
+
+<quest 2:Missing fairy|2|1>
+
+
+Bring the blonde fairy's sister
+to her. Yup, that's it. Not much
+to it, really.
+
+This quest's objective line is
+blank so they don't appear at
+all below.
+</quest>
+
+<quest 3:Fairy's to-do list|3|1>
+Scare off the chicken,Unlock the gate,Bring the fairy chocolate
+
+The fairy has a little list of
+chores for you to do in order
+to rescue her.
+
+I guess this is how you save
+the world?
+</quest>
