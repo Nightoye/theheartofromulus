@@ -89,7 +89,7 @@
 // * Menus
 //==============================
 ImageManager.loadMenus = function(filename) {
-    return this.loadBitmap('img/System/', filename, 0, true);
+    return this.loadBitmap('img/system/', filename, 0, true);
 };
 
 //=============================================================================
