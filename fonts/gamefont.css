@@ -1,0 +1,9 @@
+@font-face {
+    font-family: GameFont;
+    src:
+	url("NotoSansHans-DemiLight.ttf");
+}
+@font-face {
+font-family: MenuFont;
+src: url("Zcool.ttf");
+}
