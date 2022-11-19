@@ -1,0 +1,141 @@
+截止目前为止，游戏中使用的非原创素材：
+
+===美术===
+注意：美术部分因为出处很杂，不确定有没有遗漏，如果有发现，请联系作者告知，非常感谢。
+
+【行走图&怪物图】
+
+RPG MAKER/MZ官方素材
+
+hiddenone
+https://www.hiddenone-sprites.com/
+
+P3X-774
+https://vibrato08.wixsite.com/p3x-774/material
+
+whtdragon
+https://forums.rpgmakerweb.com/index.php?threads/whtdragons-animals-and-running-horses-now-with-more-dragons.53552/
+
+Avery
+https://forums.rpgmakerweb.com/index.php?threads/avys-mv-stuff.53317/
+
+Tonbi
+https://forums.rpgmakerweb.com/index.php?threads/tonbis-material-factory.103843/
+
+RavenBlackbird
+https://forums.rpgmakerweb.com/index.php?threads/sprited-sv_enemies.60465/
+
+AlephNull
+https://forums.rpgmakerweb.com/index.php?threads/aleph-nulls-resources-update-7-3-16-weapon-icons.63331/#post-620241
+
+Matseb2611
+https://forums.rpgmakerweb.com/index.php?threads/matsebs-resources-free-for-commercial-use-tiles-sprites-animated-battlers-and-more.28754/
+
+Ice
+https://forums.rpgmakerweb.com/index.php?threads/ices-generator-parts-09-22-2017-updated.54798/
+
+Bokou
+https://forums.rpgmakerweb.com/index.php?threads/bokous-freesources-added-gothic-tileset.48613/
+
+Wayward
+https://forums.rpgmakerweb.com/index.php?threads/waywards-mv-resources-battlers-sprites-tiles-update-210212-sprites-modular-people1_6.108090/
+
+Aekashics
+http://www.akashics.moe/
+
+ShadowHawkDragon
+https://forums.rpgmakerweb.com/index.php?threads/shades-of-battler-animated-395-dragonbones-188.57054/
+
+Sinweaver
+https://forums.rpgmakerweb.com/index.php?threads/sins-little-bit-of-everything.49255/#post-488389
+
+【动画】
+
+TTKOZ
+https://forums.rpgmakerweb.com/index.php?threads/ttkoz-freedom-project-mv-new-binary-data-element-pack.47407/
+
+hadecynn
+https://forums.rpgmakerweb.com/index.php?threads/the-free-archives-formerly-animations-archive.55245/
+
+【界面】 - MOG+自制
+
+SkottyTV
+https://forums.rpgmakerweb.com/index.php?threads/stv-window-skins-newest-solid-count-66.68784/
+
+【地图及远景】
+
+FSM系列及范例地图
+
+創作工房春巻
+http://harumakikukan.web.fc2.com/
+
+Voluspa
+https://forums.rpgmakerweb.com/index.php?threads/voluspa-tiles-tiles-supporting-characters-etc.63714/
+
+whtdragon
+https://forums.rpgmakerweb.com/index.php?threads/whtdragons-tilesets-addons-fixes-and-more.60504/page-12#post-1186755
+
+PandaMaru
+https://forums.rpgmakerweb.com/index.php?threads/marus-mv-bits.46811/
+
+Avery
+https://forums.rpgmakerweb.com/index.php?threads/avys-mv-stuff.53317/
+
+​コミュ将
+https://comshou.wixsite.com/com-sho
+
+Gotcha Gotcha Games
+
+【图标】
+
+Avery
+https://forums.rpgmakerweb.com/index.php?threads/avys-icon-workshop-update-jan-2021.21623/#entry529044
+
+Lorc
+https://opengameart.org/content/700-rpg-icons
+
+からし（Un Almacen）
+http://zioru.x0.to/
+
+===音乐/音效===
+
+RPG MAKER MV 官方素材
+
+Sketchy Logic - War of the Arcane
+https://opengameart.org/content/war-of-the-arcane-18-rpg-tracks
+
+HitCtrl的作品
+https://opengameart.org/users/hitctrl
+
+Matthew Pablo的作品
+https://opengameart.org/users/matthew-pablo
+
+Ean Grimm的作品
+Youtube: https://www.youtube.com/channel/UCwF4bAx_W482_AQu-mv1vWg
+
+フリー音楽素材MusicMaterial
+http://musicmaterial.jpn.org/
+
+Gotcha Gotcha Games
+
+===程序===
+
+YEP系列插件（战斗，对话，菜单等）
+
+MOG系列插件（菜单，地图事件等）
+
+TDDP Mouse System
+
+GALV的地图演出和对话插件
+
+Terrax Lighting插件
+
+Sasuke KANNAZUKI的foreground插件
+
+Victor Sant的战斗相关插件（由DreamX补充）
+
+SumRndmDde的战斗UI和镜头相关插件
+
+Melosx的物品分类插件
+
+少部分自制
