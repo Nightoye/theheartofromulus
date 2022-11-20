@@ -807,7 +807,7 @@ DataManager.setItemCategory = function(items) {
 		}
 	}
 };
-
+/*
 Window_ItemCategory.prototype.makeCommandList = function() {
 	if(eval(MSX.InventoryCategories.TwoLevelMenu)){
 		this.addCommand(TextManager.item,    'tlm_item');
@@ -852,7 +852,7 @@ Window_ItemCategory.prototype.makeCommandList = function() {
         }
 	}
 };
-
+*/
 MSX.InventoryCategories.Window_itemList_includes = Window_ItemList.prototype.includes;
 Window_ItemList.prototype.includes = function(item) {
 	if (item === null) {
