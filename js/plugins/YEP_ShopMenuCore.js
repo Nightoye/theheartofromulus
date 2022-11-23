@@ -349,7 +349,7 @@ Window_ShopCommand.prototype.createCommand = function(command) {
     } else if (['CUSTOM', 'ORIGINAL'].contains(command)) {
       this.addCustomCommands();
     } else if (command === 'EQUIP') {
-      this.addCommand("装备", 'equip'); //调整了文字
+      this.addCommand("裝備", 'equip'); //調整了文字
     }
 };
 
@@ -773,11 +773,11 @@ function Window_ShopCategory() {
     this.initialize.apply(this, arguments);
 }
 
-Window_ShopCategory.prototype = Object.create(Window_ItemCategory.prototype);
+Window_ShopCategory.prototype = Object.create(Window_HorzCommand.prototype);
 Window_ShopCategory.prototype.constructor = Window_ShopCategory;
 
 Window_ShopCategory.prototype.initialize = function() {
-    Window_ItemCategory.prototype.initialize.call(this);
+    Window_HorzCommand.prototype.initialize.call(this);
 };
 
 Window_ShopCategory.prototype.windowWidth = function() {
@@ -792,10 +792,27 @@ Window_ShopCategory.prototype.maxCols = function() {
     return 1;
 };
 
+Window_ShopCategory.prototype.update = function() {
+    Window_HorzCommand.prototype.update.call(this);
+    if (this._itemWindow) {
+        this._itemWindow.setCategory(this.currentSymbol());
+    }
+};
+
 Window_ShopCategory.prototype.itemTextAlign = function() {
     return Yanfly.Param.ShopCommandAlign;
 };
+Window_ShopCategory.prototype.makeCommandList = function() {
+    this.addCommand("物品",    'item');
+    this.addCommand(TextManager.weapon,  'weapon');
+    this.addCommand(TextManager.armor,   'armor');
+    this.addCommand(TextManager.keyItem, 'keyItem');
+};
 
+Window_ShopCategory.prototype.setItemWindow = function(itemWindow) {
+    this._itemWindow = itemWindow;
+    this.update();
+};
 //=============================================================================
 // Window_ShopBuy
 //=============================================================================

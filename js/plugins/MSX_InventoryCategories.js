@@ -807,7 +807,7 @@ DataManager.setItemCategory = function(items) {
 		}
 	}
 };
-/*
+
 Window_ItemCategory.prototype.makeCommandList = function() {
 	if(eval(MSX.InventoryCategories.TwoLevelMenu)){
 		this.addCommand(TextManager.item,    'tlm_item');
@@ -852,7 +852,7 @@ Window_ItemCategory.prototype.makeCommandList = function() {
         }
 	}
 };
-*/
+
 MSX.InventoryCategories.Window_itemList_includes = Window_ItemList.prototype.includes;
 Window_ItemList.prototype.includes = function(item) {
 	if (item === null) {
@@ -1102,6 +1102,56 @@ Scene_Item.prototype.onItemCancel = function() {
 			break;
 	};
 };
+
+Scene_Shop.prototype.createCategoryWindow = function() {
+    this._categoryWindow = new Window_NewShopCategory();
+    this._categoryWindow.setHelpWindow(this._helpWindow);
+    this._categoryWindow.y = this._dummyWindow.y;
+    this._categoryWindow.hide();
+    this._categoryWindow.deactivate();
+    this._categoryWindow.setHandler('ok',     this.onCategoryOk.bind(this));
+    this._categoryWindow.setHandler('cancel', this.onCategoryCancel.bind(this));
+    this.addWindow(this._categoryWindow);
+};
+
+function Window_NewShopCategory() {
+    this.initialize.apply(this, arguments);
+}
+
+Window_NewShopCategory.prototype = Object.create(Window_HorzCommand.prototype);
+Window_NewShopCategory.prototype.constructor = Window_NewShopCategory;
+
+Window_NewShopCategory.prototype.initialize = function() {
+    Window_HorzCommand.prototype.initialize.call(this, 0, 0);
+};
+
+Window_NewShopCategory.prototype.windowWidth = function() {
+    return Graphics.boxWidth;
+};
+
+Window_NewShopCategory.prototype.maxCols = function() {
+    return 4;
+};
+
+Window_NewShopCategory.prototype.update = function() {
+    Window_HorzCommand.prototype.update.call(this);
+    if (this._itemWindow) {
+        this._itemWindow.setCategory(this.currentSymbol());
+    }
+};
+
+Window_NewShopCategory.prototype.makeCommandList = function() {
+    this.addCommand(TextManager.item,    'item');
+    this.addCommand(TextManager.weapon,  'weapon');
+    this.addCommand(TextManager.armor,   'armor');
+    this.addCommand(TextManager.keyItem, 'keyItem');
+};
+
+Window_NewShopCategory.prototype.setItemWindow = function(itemWindow) {
+    this._itemWindow = itemWindow;
+    this.update();
+};
+
 /*
 //#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 // Shop Mod
