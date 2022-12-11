@@ -1,6 +1,7 @@
 //=============================================================================
 // Yanfly Engine Plugins - Buffs & States Core
 // YEP_BuffsStatesCore.js
+// 修改了getstatecounter函数
 //=============================================================================
 
 var Imported = Imported || {};
@@ -1331,7 +1332,8 @@ Game_BattlerBase.prototype.removeStateCounter = function(stateId) {
 
 Game_BattlerBase.prototype.getStateCounter = function(stateId) {
   if (this._stateCounter === undefined) this.initStateCounter();
-  return this._stateCounter[stateId];
+  if (this._stateCounter[stateId] === undefined) return 0;
+  else return this._stateCounter[stateId];
 };
 
 Game_BattlerBase.prototype.statesAndBuffs = function() {
@@ -2090,7 +2092,7 @@ Window_Base.prototype.drawStateTurns = function(actor, state, wx, wy) {
 
 Window_Base.prototype.drawStateCounter = function(actor, state, wx, wy) {
   var value = actor.getStateCounter(state.id);
-  if (value === undefined) return;
+  if (value === 0) return; //把undefined修改成0
   var settings = state.stateCounterSettings;
   value = Yanfly.Util.toGroup(value);
   wx += settings.bufferX;
