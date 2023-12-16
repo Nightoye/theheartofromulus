@@ -24,7 +24,7 @@ Scene_Skill.prototype.create = function() {
 };
 
 Scene_Skill.prototype.createStatusWindow = function() {
-    var wx = 0;
+    var wx = 128;
     var wy = this._helpWindow.height;
     var ww = Graphics.boxWidth - wx;
     var wh = this._skillTypeWindow.height;
@@ -49,9 +49,9 @@ Scene_Skill.prototype.onActorChange = function() {
 };
 
 Scene_Skill.prototype.createItemWindow = function() {
-    var wx = 0;
+    var wx = 64;
     var wy = this._statusWindow.y + this._statusWindow.height;
-    var ww = Graphics.boxWidth / 2;
+    var ww = Graphics.boxWidth / 2 - 64;
     var wh = Graphics.boxHeight - wy;
     this._itemWindow = new Window_SkillList(wx, wy, ww, wh);
     this._itemWindow.setHelpWindow(this._helpWindow);
@@ -62,7 +62,7 @@ Scene_Skill.prototype.createItemWindow = function() {
     this._skillTypeWindow.setSkillWindow(this._itemWindow);
     this.addWindow(this._itemWindow);
 	
-	var wx = this._itemWindow.width;
+	var wx = this._itemWindow.width + 64;
     var wy = this._itemWindow.y;
     var ww = Graphics.boxWidth - wx;
     var wh = this._itemWindow.height;
@@ -146,7 +146,7 @@ Window_SkillInfo.prototype.drawSkillInfo = function(dy) {
     var dx = this.textPadding();
     var dw = this.contents.width - this.textPadding() * 2;
 	var dh = this.contents.fontSize + 8;
-	this.drawDarkRect(dx,dy,dw,dh);
+	this.drawDarkRect(dx,dy,dw-64,dh);
     this.resetFontSettings();
     this.drawItemName(this._item, dx, dy, dw);
 	dy += this.contents.fontSize + 8;

@@ -551,7 +551,7 @@ Scene_Status.prototype.update = function() {
 // ** Window Status
 //=============================================================================
   Window_Status.prototype.drawXparams = function(y) {
-	var xparamText = ['命中','回避','暴击',,,,'反击'];
+	var xparamText = ['命中','回避','暴击','暴击回避','魔法回避','魔法反射','反击'];
     var x = 600;
     var w = 120;
     var x2 = 720;

@@ -2145,7 +2145,3 @@ Window_BattleEnemy.prototype.itemTextAlign = function() {
 }
 })(SRD.BattleGUICore);
 
-
-Window_Help.prototype.loadWindowskin = function() {
-    this.windowskin = ImageManager.loadSystem('Window2');
-};

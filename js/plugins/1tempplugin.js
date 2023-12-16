@@ -2,7 +2,45 @@
  * @plugindesc 一些公式调整，注意放在顶端
  * @author Nighto
  */
- 
+
+//Game_Party.prototype.maxBattleMembers = function() {
+//   return 3;
+//};
+//可以调整队伍人数，虽然现在弄已经来不及了，但以后可以设置。三人组其实比较符合最初的构思……
+
+//战斗中增加人数的时候刷新状态框，需要YEP_BattleStatus
+Game_Party.prototype.addActor = function(actorId) {
+    if (!this._actors.contains(actorId)) {
+        this._actors.push(actorId);
+        $gamePlayer.refresh();
+        $gameMap.requestRefresh();
+		if ($gameParty.inBattle()){
+			BattleManager._statusWindow.width += 200;
+			BattleManager._statusWindow._faceContents.bitmap.clear();
+			BattleManager._statusWindow.createContents();
+		}
+    }
+};
+
+ //更改window_help的skin
+ Window_Help.prototype.loadWindowskin = function() {
+    this.windowskin = ImageManager.loadSystem('Window2');
+};
+ //更改装备栏物品的颜色
+Window_ItemList.prototype.drawItem = function(index) {
+    var item = this._data[index];
+    if (item) {
+        var numberWidth = this.numberWidth();
+        var rect = this.itemRect(index);
+        rect.width -= this.textPadding();
+        this.changePaintOpacity(this.isEnabled(item));
+		this.setItemTextColor(item);
+        this.drawItemName(item, rect.x, rect.y, rect.width - numberWidth);
+        this.drawItemNumber(item, rect.x, rect.y, rect.width);
+        this.changePaintOpacity(1);
+    }
+};
+
  //更改物品指令以免与MOG menu插件冲突
 Window_ActorCommand.prototype.addItemCommand = function() {
     this.addCommand("物品", 'item');
@@ -81,6 +119,9 @@ Window_Base.prototype.drawItemName = function(item, x, y, width) {
 //修改地图选项中显示的物品类型
 Window_EventItem.prototype.includes = function(item) {
     var itypeId = $gameMessage.itemChoiceItypeId();
+	if (DataManager.isItem(item) && itypeId === 3 && item.customCategory === 'material'){
+		return true;
+	}
     return DataManager.isItem(item) && item.itypeId === itypeId && item.customCategory === '';
 };
 

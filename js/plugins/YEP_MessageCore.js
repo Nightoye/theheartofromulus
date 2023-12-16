@@ -1,6 +1,6 @@
 //=============================================================================
 // Yanfly Engine Plugins - Message Core
-// YEP_MessageCore.js
+// YEP_MessageCore.js //改变了wordwrap的部分
 //=============================================================================
 
 var Imported = Imported || {};

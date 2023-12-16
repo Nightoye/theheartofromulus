@@ -11,7 +11,7 @@
  *
  */
 
-//和yep_savecore结合版本，下载版关闭此脚本即可
+//和yep_savecore结合版本，下载版关闭此脚本即可，*保存在Save1位置
 
 
 
@@ -27,11 +27,11 @@ DataManager.isAnySavefileExists = function() {
 Scene_File.prototype.savefileId = function() {
     return this._listWindow.index() + 1 - 1;// 修改 - 1
 };
-
+*/
 Window_SavefileList.prototype.maxItems = function() {
     return DataManager.maxSavefiles() + 1 ;//修改 + 1 
 };
-*/
+
 Window_SavefileList.prototype.drawItem = function(index) {
     var id = index + 1;
     if(id == 1 ){
